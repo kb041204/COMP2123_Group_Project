@@ -22,7 +22,7 @@ typedef struct history {
     double runTime;
 } History;
 
-/*
+
 void historyInsert(history *& h, const string & c, const double & r) ;
  
 void printHistory(history *h, int displayed);
@@ -32,7 +32,7 @@ void copyHistory(history *source, history *&destin);
 bool isSorted(history *h) ;
  
 void sortHistory(history *&h);
-*/
+
 string normalize(const string original_string) { // delete optional space and determine whether the string fits the format
     string temp_string;
     bool potential_sbu = true;
@@ -85,7 +85,7 @@ int main() {
         string new_command = normalize(command); // remove any optional space and check whether it matches the format of built-in command
        
         clock_t begin = clock();
-       	/*
+       	
         if(new_command == "history") {
             // display last 5 commands, later command first
             printHistory(listOfHistory, 1); // print first 5 history, or until the end
@@ -108,7 +108,7 @@ int main() {
         }
        
         cout << endl; // break line
-        */
+        
         if(new_command == "history") {
             // display last 5 commands, later command first
             int count = 0;
@@ -151,7 +151,7 @@ int main() {
         cout << endl; // break line        
     }
 }
-/*
+
 void historyInsert(history *& h, const string & c, const double & r) {
     history *newH = new history;
     newH -> command = c;
@@ -200,6 +200,6 @@ void sortHistory(history *&h) {
         }
     }
 }
-*/
+
 
 
